@@ -16,6 +16,17 @@ video {
   bottom: 0;
   z-index: -1;
 }
+
+@media (max-width: 750px) {
+  #background-video {
+    display: none;
+  }
+  body {
+    background: url('https://assets.codepen.io/6093409/river.jpg') no-repeat;
+    background-size: cover;
+  }
+}
+
 .display {
   text-align: center;
   margin-bottom: 100px;
@@ -30,8 +41,7 @@ video {
   position: absolute;
   opacity: 0.5;
 }
-.imageContainer {
-}
+
 .headline {
   /* border: 1px solid red; */
   font-size: 80px;
