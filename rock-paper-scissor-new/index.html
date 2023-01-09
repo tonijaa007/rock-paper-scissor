@@ -5,15 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h2>Your Choice: <span id="userChoice"></span></h2>
-    <h2>Computer Choice: <span id="computerChoice"></span></h2>
-    <h2>Outcome: <span id="displayResult"></span></h2>
+    <video autoplay muted loop id="myVideo">
+      <source
+        src="images/Jigsaw i want to play the game.mp4"
+        type="video/mp4"
+      />
+    </video>
 
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissor">Scissor</button>
+    <div class="display">
+      <div class="containerHeader">
+        <div class="h1Container">
+          <h1 class="headline">Let´s play a game!</h1>
+        </div>
+
+        <div class="imageContainer">
+          <img
+            src="images/jigsaw.jpg"
+            alt="jigsaw riding bycycle in the dark"
+          />
+        </div>
+      </div>
+
+      <h1>Your Choice: <span id="userChoice"></span></h1>
+      <h1>Computer Choice: <span id="computerChoice"></span></h1>
+      <h1>Outcome: <span id="displayResult"></span></h1>
+    </div>
+
+    <div class="container">
+      <button id="rock">
+        <img src=images/rock2.png alt="rock hand sign" class="rock hand sign"
+        id="rock" />
+      </button>
+      <button id="paper">
+        <img src=images/paper2.png alt="rock hand sign" class="paper hand sign"
+        id="paper" />
+      </button>
+      <button id="scissor">
+        <img src=images/scissor2.png alt="rock hand sign" class="scissor hand
+        sign" id="scissor"/>
+      </button>
+    </div>
 
     <script src="index.js" charset="utf-8"></script>
   </body>

@@ -1,7 +1,7 @@
 const userChoiceDisplay = document.getElementById('userChoice');
 const computerChoiceDisplay = document.getElementById('computerChoice');
 const resultDisplay = document.getElementById('displayResult');
-const possibleChoices = document.querySelectorAll('button');
+const possibleChoices = document.querySelectorAll('button, img');
 let userChoice;
 let computerChoice;
 let result;
