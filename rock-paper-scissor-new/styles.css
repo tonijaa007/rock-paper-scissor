@@ -55,16 +55,44 @@ video {
     4px 34px 1px #fc0000, 4px 36px 1px #fd0000, 4px 38px 1px #fe0000,
     4px 40px 2px #ff0000;
 }
-img {
-  width: 350px;
-}
 
+.chooseContainer {
+  border: 2px solid red;
+}
+.choose {
+  font-size: 42px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: red;
+  font-weight: 1000;
+}
 .container {
   display: flex;
   justify-content: space-evenly;
 }
-button {
-  border: 1px solid green;
+img {
+  border: 5px solid green;
   border-radius: 50%;
   background-color: white;
+  width: 350px;
+}
+
+.scoreContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#playerScore,
+#computerScore,
+.scoreStyle {
+  color: rgb(240, 65, 65);
+  background-color: white;
+}
+
+.hiddenButton {
+  display: none;
+}
+
+button {
+  color: black;
 }
