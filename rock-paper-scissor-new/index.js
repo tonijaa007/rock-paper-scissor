@@ -36,7 +36,7 @@ function generateComputerChoice() {
     computerChoice = 'scissor';
   }
   computerChoiceDisplay.textContent =
-    computerChoice.charAt(0).toUpperCase() + computerChoice.substring(1);
+    computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1);
 }
 
 function getResult() {
