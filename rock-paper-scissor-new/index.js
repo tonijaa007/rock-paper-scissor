@@ -1,7 +1,7 @@
 const userChoiceDisplay = document.getElementById('userChoice');
 const computerChoiceDisplay = document.getElementById('computerChoice');
 const resultDisplay = document.getElementById('displayResult');
-const possibleChoices = document.querySelectorAll('img');
+const possibleChoices = document.querySelectorAll('button');
 const playerScoreDisplay = document.getElementById('playerScore');
 const computerScoreDisplay = document.getElementById('computerScore');
 const endResultDisplay = document.getElementById('endResult');
@@ -15,7 +15,8 @@ let computerScore = 0;
 possibleChoices.forEach((possibleChoice) =>
   possibleChoice.addEventListener('click', (e) => {
     userChoice = e.target.id;
-    userChoiceDisplay.innerHTML = userChoice;
+    userChoiceDisplay.innerHTML =
+      userChoice.charAt(0).toUpperCase() + userChoice.slice(1);
     generateComputerChoice();
     getResult();
     getEndResult();
@@ -34,7 +35,8 @@ function generateComputerChoice() {
   if (randomNumber === 2) {
     computerChoice = 'scissor';
   }
-  computerChoiceDisplay.textContent = computerChoice;
+  computerChoiceDisplay.textContent =
+    computerChoice.charAt(0).toUpperCase() + computerChoice.substring(1);
 }
 
 function getResult() {
@@ -70,7 +72,7 @@ function getResult() {
 
     result = 'you lose!';
   }
-  resultDisplay.innerHTML = result;
+  resultDisplay.innerHTML = result.charAt(0).toUpperCase() + result.slice(1);
   playerScoreDisplay.innerHTML = playerScore;
   computerScoreDisplay.innerHTML = computerScore;
   console.log(computerScore, 'player');
@@ -84,14 +86,14 @@ function disableButtons() {
 }
 
 function getEndResult() {
-  for (let i = 0; i <= 5; i++) {
-    if (computerScore === 5) {
-      endResultDisplay.innerHTML = 'You won the game!';
-      disableButtons();
-    }
-    if (playerScore === 5) {
-      endResultDisplay.innerHTML = 'The computer won the game!';
-      disableButtons();
-    }
+  if (playerScore === 5) {
+    endResultDisplay.innerHTML = `You won the game!
+      Please reload the page to play again`;
+    disableButtons();
+  }
+  if (computerScore === 5) {
+    endResultDisplay.innerHTML = `The computer won the game!
+      Please reload the page to play again`;
+    disableButtons();
   }
 }
